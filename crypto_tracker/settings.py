@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crypto.apps.CryptoConfig',
+    'django_celery_beat'
 ]
 
 MIDDLEWARE = [
