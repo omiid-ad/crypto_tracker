@@ -2,3 +2,6 @@
 *.sqlite3
 *.xml
 .env
+*.bak
+*.dat
+*.dir
