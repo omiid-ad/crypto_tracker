@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from os import environ
+
+from celery.schedules import crontab
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -180,3 +182,11 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Tehran'
+
+# Celery Beat settings (for periodic tasks)
+CELERY_BEAT_SCHEDULE = {
+    f'update-or-create-coins-every-5-minutes': {
+        'task': 'crypto.tasks.update_or_create_coins',
+        'schedule': crontab(minute='*/5'),
+    }
+}
