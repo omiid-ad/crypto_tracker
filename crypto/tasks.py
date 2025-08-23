@@ -4,7 +4,7 @@ import requests
 from celery import shared_task
 from django.utils import timezone
 
-from crypto.models import Coin
+from crypto.models import Coin, CoinPriceHistory
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +42,12 @@ def update_or_create_coins():
                 coin.last_price_update = timezone.now()
                 coin.save(update_fields=['last_price_update', 'price'])
 
-                logger.info(f"Updated {key} with price {last_price}")
+                CoinPriceHistory.objects.create(
+                    coin=coin,
+                    price=last_price
+                )
+                logger.debug(f"History saved for {key} at price {last_price}")
+
                 coins_processed += 1
             except Exception as coin_error:
                 logger.error(f"Error updating coin {key}: {coin_error}", exc_info=True)
