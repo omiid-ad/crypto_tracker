@@ -1,0 +1,1102 @@
+[
+  {
+    "symbol": "BTCIRT",
+    "english_name": "Bitcoin",
+    "persian_name": "بیت‌کوین"
+  },
+  {
+    "symbol": "ETHIRT",
+    "english_name": "Ethereum",
+    "persian_name": "اتریوم"
+  },
+  {
+    "symbol": "LTCIRT",
+    "english_name": "Litecoin",
+    "persian_name": "لایت‌کوین"
+  },
+  {
+    "symbol": "USDTIRT",
+    "english_name": "Tether",
+    "persian_name": "تتر"
+  },
+  {
+    "symbol": "XRPIRT",
+    "english_name": "Ripple",
+    "persian_name": "ریپل"
+  },
+  {
+    "symbol": "BCHIRT",
+    "english_name": "Bitcoin Cash",
+    "persian_name": "بیت‌کوین کش"
+  },
+  {
+    "symbol": "BNBIRT",
+    "english_name": "Binance Coin",
+    "persian_name": "بایننس کوین"
+  },
+  {
+    "symbol": "EOSIRT",
+    "english_name": "EOS",
+    "persian_name": "ایاس"
+  },
+  {
+    "symbol": "XLMIRT",
+    "english_name": "Stellar",
+    "persian_name": "استلار"
+  },
+  {
+    "symbol": "ETCIRT",
+    "english_name": "Ethereum Classic",
+    "persian_name": "اتریوم کلاسیک"
+  },
+  {
+    "symbol": "TRXIRT",
+    "english_name": "TRON",
+    "persian_name": "ترون"
+  },
+  {
+    "symbol": "DOGEIRT",
+    "english_name": "Dogecoin",
+    "persian_name": "دوج‌کوین"
+  },
+  {
+    "symbol": "UNIIRT",
+    "english_name": "Uniswap",
+    "persian_name": "یونی‌سواپ"
+  },
+  {
+    "symbol": "DAIIRT",
+    "english_name": "Dai",
+    "persian_name": "دای"
+  },
+  {
+    "symbol": "LINKIRT",
+    "english_name": "Chainlink",
+    "persian_name": "چین‌لینک"
+  },
+  {
+    "symbol": "DOTIRT",
+    "english_name": "Polkadot",
+    "persian_name": "پولکادات"
+  },
+  {
+    "symbol": "AAVEIRT",
+    "english_name": "Aave",
+    "persian_name": "آوه"
+  },
+  {
+    "symbol": "ADAIRT",
+    "english_name": "Cardano",
+    "persian_name": "کاردانو"
+  },
+  {
+    "symbol": "SHIBIRT",
+    "english_name": "Shiba Inu",
+    "persian_name": "شیبا اینو"
+  },
+  {
+    "symbol": "FTMIRT",
+    "english_name": "Fantom",
+    "persian_name": "فانتوم"
+  },
+  {
+    "symbol": "MATICIRT",
+    "english_name": "Polygon",
+    "persian_name": "پالیگان"
+  },
+  {
+    "symbol": "AXSIRT",
+    "english_name": "Axie Infinity",
+    "persian_name": "اکسی اینفینیتی"
+  },
+  {
+    "symbol": "MANAIRT",
+    "english_name": "Decentraland",
+    "persian_name": "دیسنترالند"
+  },
+  {
+    "symbol": "SANDIRT",
+    "english_name": "The Sandbox",
+    "persian_name": "سندباکس"
+  },
+  {
+    "symbol": "AVAXIRT",
+    "english_name": "Avalanche",
+    "persian_name": "آوالانچ"
+  },
+  {
+    "symbol": "MKRIRT",
+    "english_name": "Maker",
+    "persian_name": "میکر"
+  },
+  {
+    "symbol": "GMTIRT",
+    "english_name": "STEPN",
+    "persian_name": "استپن"
+  },
+  {
+    "symbol": "USDCIRT",
+    "english_name": "USD Coin",
+    "persian_name": "یو‌اس‌دی کوین"
+  },
+  {
+    "symbol": "BTCUSDT",
+    "english_name": "Bitcoin",
+    "persian_name": "بیت‌کوین"
+  },
+  {
+    "symbol": "ETHUSDT",
+    "english_name": "Ethereum",
+    "persian_name": "اتریوم"
+  },
+  {
+    "symbol": "LTCUSDT",
+    "english_name": "Litecoin",
+    "persian_name": "لایت‌کوین"
+  },
+  {
+    "symbol": "XRPUSDT",
+    "english_name": "Ripple",
+    "persian_name": "ریپل"
+  },
+  {
+    "symbol": "BCHUSDT",
+    "english_name": "Bitcoin Cash",
+    "persian_name": "بیت‌کوین کش"
+  },
+  {
+    "symbol": "BNBUSDT",
+    "english_name": "Binance Coin",
+    "persian_name": "بایننس کوین"
+  },
+  {
+    "symbol": "EOSUSDT",
+    "english_name": "EOS",
+    "persian_name": "ایاس"
+  },
+  {
+    "symbol": "XLMUSDT",
+    "english_name": "Stellar",
+    "persian_name": "استلار"
+  },
+  {
+    "symbol": "ETCUSDT",
+    "english_name": "Ethereum Classic",
+    "persian_name": "اتریوم کلاسیک"
+  },
+  {
+    "symbol": "TRXUSDT",
+    "english_name": "TRON",
+    "persian_name": "ترون"
+  },
+  {
+    "symbol": "PMNUSDT",
+    "english_name": "PMN Token",
+    "persian_name": "توکن پی‌ام‌ان"
+  },
+  {
+    "symbol": "DOGEUSDT",
+    "english_name": "Dogecoin",
+    "persian_name": "دوج‌کوین"
+  },
+  {
+    "symbol": "UNIUSDT",
+    "english_name": "Uniswap",
+    "persian_name": "یونی‌سواپ"
+  },
+  {
+    "symbol": "DAIUSDT",
+    "english_name": "Dai",
+    "persian_name": "دای"
+  },
+  {
+    "symbol": "LINKUSDT",
+    "english_name": "Chainlink",
+    "persian_name": "چین‌لینک"
+  },
+  {
+    "symbol": "DOTUSDT",
+    "english_name": "Polkadot",
+    "persian_name": "پولکادات"
+  },
+  {
+    "symbol": "AAVEUSDT",
+    "english_name": "Aave",
+    "persian_name": "آوه"
+  },
+  {
+    "symbol": "ADAUSDT",
+    "english_name": "Cardano",
+    "persian_name": "کاردانو"
+  },
+  {
+    "symbol": "SHIBUSDT",
+    "english_name": "Shiba Inu",
+    "persian_name": "شیبا اینو"
+  },
+  {
+    "symbol": "FTMUSDT",
+    "english_name": "Fantom",
+    "persian_name": "فانتوم"
+  },
+  {
+    "symbol": "MATICUSDT",
+    "english_name": "Polygon",
+    "persian_name": "پالیگان"
+  },
+  {
+    "symbol": "AXSUSDT",
+    "english_name": "Axie Infinity",
+    "persian_name": "اکسی اینفینیتی"
+  },
+  {
+    "symbol": "MANAUSDT",
+    "english_name": "Decentraland",
+    "persian_name": "دیسنترالند"
+  },
+  {
+    "symbol": "SANDUSDT",
+    "english_name": "The Sandbox",
+    "persian_name": "سندباکس"
+  },
+  {
+    "symbol": "AVAXUSDT",
+    "english_name": "Avalanche",
+    "persian_name": "آوالانچ"
+  },
+  {
+    "symbol": "MKRUSDT",
+    "english_name": "Maker",
+    "persian_name": "میکر"
+  },
+  {
+    "symbol": "GMTUSDT",
+    "english_name": "STEPN",
+    "persian_name": "استپن"
+  },
+  {
+    "symbol": "USDCUSDT",
+    "english_name": "USD Coin",
+    "persian_name": "یو‌اس‌دی کوین"
+  },
+  {
+    "symbol": "CHZIRT",
+    "english_name": "Chiliz",
+    "persian_name": "چیلیز"
+  },
+  {
+    "symbol": "GRTIRT",
+    "english_name": "The Graph",
+    "persian_name": "گراف"
+  },
+  {
+    "symbol": "CRVIRT",
+    "english_name": "Curve DAO Token",
+    "persian_name": "کرو دائو توکن"
+  },
+  {
+    "symbol": "BANDUSDT",
+    "english_name": "Band Protocol",
+    "persian_name": "بند پروتکل"
+  },
+  {
+    "symbol": "COMPUSDT",
+    "english_name": "Compound",
+    "persian_name": "کامپاند"
+  },
+  {
+    "symbol": "EGLDIRT",
+    "english_name": "MultiversX (Elrond)",
+    "persian_name": "الروند"
+  },
+  {
+    "symbol": "HBARUSDT",
+    "english_name": "Hedera",
+    "persian_name": "هدرا"
+  },
+  {
+    "symbol": "GALIRT",
+    "english_name": "Galxe",
+    "persian_name": "گلکسی"
+  },
+  {
+    "symbol": "HBARIRT",
+    "english_name": "Hedera",
+    "persian_name": "هدرا"
+  },
+  {
+    "symbol": "WBTCUSDT",
+    "english_name": "Wrapped Bitcoin",
+    "persian_name": "بیت‌کوین رپد شده"
+  },
+  {
+    "symbol": "IMXIRT",
+    "english_name": "Immutable X",
+    "persian_name": "ایمیوتیبل ایکس"
+  },
+  {
+    "symbol": "WBTCIRT",
+    "english_name": "Wrapped Bitcoin",
+    "persian_name": "بیت‌کوین رپد شده"
+  },
+  {
+    "symbol": "ONEIRT",
+    "english_name": "Harmony",
+    "persian_name": "هارمونی"
+  },
+  {
+    "symbol": "GLMUSDT",
+    "english_name": "Golem",
+    "persian_name": "گولم"
+  },
+  {
+    "symbol": "ENSIRT",
+    "english_name": "Ethereum Name Service",
+    "persian_name": "اتریوم نیم سرویس"
+  },
+  {
+    "symbol": "1M_BTTIRT",
+    "english_name": "1M BitTorrent",
+    "persian_name": "یک میلیون بیت‌تورنت"
+  },
+  {
+    "symbol": "SUSHIIRT",
+    "english_name": "SushiSwap",
+    "persian_name": "سوشی‌سواپ"
+  },
+  {
+    "symbol": "LDOIRT",
+    "english_name": "Lido DAO",
+    "persian_name": "لیدو دائو"
+  },
+  {
+    "symbol": "ATOMUSDT",
+    "english_name": "Cosmos",
+    "persian_name": "کازماس"
+  },
+  {
+    "symbol": "ZROIRT",
+    "english_name": "LayerZero",
+    "persian_name": "لیرزیرو"
+  },
+  {
+    "symbol": "STORJIRT",
+    "english_name": "Storj",
+    "persian_name": "استورج"
+  },
+  {
+    "symbol": "ANTIRT",
+    "english_name": "Aragon",
+    "persian_name": "آراگون"
+  },
+  {
+    "symbol": "AEVOUSDT",
+    "english_name": "Aevo",
+    "persian_name": "آوو"
+  },
+  {
+    "symbol": "100K_FLOKIIRT",
+    "english_name": "100K Floki",
+    "persian_name": "صد هزار فلوکی"
+  },
+  {
+    "symbol": "RSRUSDT",
+    "english_name": "Reserve Rights",
+    "persian_name": "رزرو رایتس"
+  },
+  {
+    "symbol": "API3USDT",
+    "english_name": "API3",
+    "persian_name": "ای‌پی‌آی3"
+  },
+  {
+    "symbol": "GLMIRT",
+    "english_name": "Golem",
+    "persian_name": "گولم"
+  },
+  {
+    "symbol": "XMRIRT",
+    "english_name": "Monero",
+    "persian_name": "مونرو"
+  },
+  {
+    "symbol": "ENSUSDT",
+    "english_name": "Ethereum Name Service",
+    "persian_name": "اتریوم نیم سرویس"
+  },
+  {
+    "symbol": "OMIRT",
+    "english_name": "MANTRA",
+    "persian_name": "مانترا"
+  },
+  {
+    "symbol": "RDNTIRT",
+    "english_name": "Radiant Capital",
+    "persian_name": "ردینت کپیتال"
+  },
+  {
+    "symbol": "MAGICUSDT",
+    "english_name": "Treasure",
+    "persian_name": "مجیک"
+  },
+  {
+    "symbol": "TIRT",
+    "english_name": "Threshold",
+    "persian_name": "ترشهولد"
+  },
+  {
+    "symbol": "ATOMIRT",
+    "english_name": "Cosmos",
+    "persian_name": "کازماس"
+  },
+  {
+    "symbol": "NOTIRT",
+    "english_name": "Notcoin",
+    "persian_name": "نات‌کوین"
+  },
+  {
+    "symbol": "CVXIRT",
+    "english_name": "Convex Finance",
+    "persian_name": "کانوکس فایننس"
+  },
+  {
+    "symbol": "XTZIRT",
+    "english_name": "Tezos",
+    "persian_name": "تزوس"
+  },
+  {
+    "symbol": "FILIRT",
+    "english_name": "Filecoin",
+    "persian_name": "فایل‌کوین"
+  },
+  {
+    "symbol": "UMAIRT",
+    "english_name": "UMA",
+    "persian_name": "اوما"
+  },
+  {
+    "symbol": "1B_BABYDOGEIRT",
+    "english_name": "1B Baby Doge Coin",
+    "persian_name": "یک میلیارد بیبی دوج کوین"
+  },
+  {
+    "symbol": "BANDIRT",
+    "english_name": "Band Protocol",
+    "persian_name": "بند پروتکل"
+  },
+  {
+    "symbol": "SSVIRT",
+    "english_name": "SSV Network",
+    "persian_name": "اس‌اس‌وی نتورک"
+  },
+  {
+    "symbol": "DAOIRT",
+    "english_name": "DAO Maker",
+    "persian_name": "دائو میکر"
+  },
+  {
+    "symbol": "BLURIRT",
+    "english_name": "Blur",
+    "persian_name": "بلر"
+  },
+  {
+    "symbol": "ONEUSDT",
+    "english_name": "Harmony",
+    "persian_name": "هارمونی"
+  },
+  {
+    "symbol": "EGALAUSDT",
+    "english_name": "Gala (Ethereum)",
+    "persian_name": "گالا (اتریوم)"
+  },
+  {
+    "symbol": "GMXIRT",
+    "english_name": "GMX",
+    "persian_name": "جی‌ام‌ایکس"
+  },
+  {
+    "symbol": "XTZUSDT",
+    "english_name": "Tezos",
+    "persian_name": "تزوس"
+  },
+  {
+    "symbol": "FLOWUSDT",
+    "english_name": "Flow",
+    "persian_name": "فلو"
+  },
+  {
+    "symbol": "GALUSDT",
+    "english_name": "Galxe",
+    "persian_name": "گلکسی"
+  },
+  {
+    "symbol": "WIRT",
+    "english_name": "Wormhole",
+    "persian_name": "ورم‌هول"
+  },
+  {
+    "symbol": "CVCUSDT",
+    "english_name": "Civic",
+    "persian_name": "سیویک"
+  },
+  {
+    "symbol": "NMRUSDT",
+    "english_name": "Numeraire",
+    "persian_name": "نومریر"
+  },
+  {
+    "symbol": "SKLIRT",
+    "english_name": "SKALE Network",
+    "persian_name": "اسکیل نتورک"
+  },
+  {
+    "symbol": "SNTIRT",
+    "english_name": "Status",
+    "persian_name": "استاتوس"
+  },
+  {
+    "symbol": "BATUSDT",
+    "english_name": "Basic Attention Token",
+    "persian_name": "بیسیک اتنشن توکن"
+  },
+  {
+    "symbol": "TRBUSDT",
+    "english_name": "Tellor",
+    "persian_name": "تلور"
+  },
+  {
+    "symbol": "NMRIRT",
+    "english_name": "Numeraire",
+    "persian_name": "نومریر"
+  },
+  {
+    "symbol": "RDNTUSDT",
+    "english_name": "Radiant Capital",
+    "persian_name": "ردینت کپیتال"
+  },
+  {
+    "symbol": "API3IRT",
+    "english_name": "API3",
+    "persian_name": "ای‌پی‌آی3"
+  },
+  {
+    "symbol": "CVCIRT",
+    "english_name": "Civic",
+    "persian_name": "سیویک"
+  },
+  {
+    "symbol": "WLDIRT",
+    "english_name": "Worldcoin",
+    "persian_name": "ورلدکوین"
+  },
+  {
+    "symbol": "YFIUSDT",
+    "english_name": "yearn.finance",
+    "persian_name": "یرن فایننس"
+  },
+  {
+    "symbol": "SOLIRT",
+    "english_name": "Solana",
+    "persian_name": "سولانا"
+  },
+  {
+    "symbol": "TUSDT",
+    "english_name": "Threshold",
+    "persian_name": "ترشهولد"
+  },
+  {
+    "symbol": "QNTUSDT",
+    "english_name": "Quant",
+    "persian_name": "کوانت"
+  },
+  {
+    "symbol": "IMXUSDT",
+    "english_name": "Immutable X",
+    "persian_name": "ایمیوتیبل ایکس"
+  },
+  {
+    "symbol": "AEVOIRT",
+    "english_name": "Aevo",
+    "persian_name": "آوو"
+  },
+  {
+    "symbol": "GMXUSDT",
+    "english_name": "GMX",
+    "persian_name": "جی‌ام‌ایکس"
+  },
+  {
+    "symbol": "ETHFIUSDT",
+    "english_name": "Ether.fi",
+    "persian_name": "اترفای"
+  },
+  {
+    "symbol": "QNTIRT",
+    "english_name": "Quant",
+    "persian_name": "کوانت"
+  },
+  {
+    "symbol": "GRTUSDT",
+    "english_name": "The Graph",
+    "persian_name": "گراف"
+  },
+  {
+    "symbol": "WLDUSDT",
+    "english_name": "Worldcoin",
+    "persian_name": "ورلدکوین"
+  },
+  {
+    "symbol": "FETIRT",
+    "english_name": "Fetch.ai",
+    "persian_name": "فچ‌ای‌آی"
+  },
+  {
+    "symbol": "AGIXIRT",
+    "english_name": "SingularityNET",
+    "persian_name": "سینگولاریتی‌نت"
+  },
+  {
+    "symbol": "NOTUSDT",
+    "english_name": "Notcoin",
+    "persian_name": "نات‌کوین"
+  },
+  {
+    "symbol": "LPTIRT",
+    "english_name": "Livepeer",
+    "persian_name": "لایوپیر"
+  },
+  {
+    "symbol": "SLPIRT",
+    "english_name": "Smooth Love Potion",
+    "persian_name": "اسموث لاو پوشن"
+  },
+  {
+    "symbol": "MEMEUSDT",
+    "english_name": "Memecoin",
+    "persian_name": "میم‌کوین"
+  },
+  {
+    "symbol": "SOLUSDT",
+    "english_name": "Solana",
+    "persian_name": "سولانا"
+  },
+  {
+    "symbol": "BALUSDT",
+    "english_name": "Balancer",
+    "persian_name": "بالانسر"
+  },
+  {
+    "symbol": "DAOUSDT",
+    "english_name": "DAO Maker",
+    "persian_name": "دائو میکر"
+  },
+  {
+    "symbol": "COMPIRT",
+    "english_name": "Compound",
+    "persian_name": "کامپاند"
+  },
+  {
+    "symbol": "MEMEIRT",
+    "english_name": "Memecoin",
+    "persian_name": "میم‌کوین"
+  },
+  {
+    "symbol": "TONUSDT",
+    "english_name": "Toncoin",
+    "persian_name": "تون‌کوین"
+  },
+  {
+    "symbol": "BATIRT",
+    "english_name": "Basic Attention Token",
+    "persian_name": "بیسیک اتنشن توکن"
+  },
+  {
+    "symbol": "SNXIRT",
+    "english_name": "Synthetix",
+    "persian_name": "سنتتیکس"
+  },
+  {
+    "symbol": "TRBIRT",
+    "english_name": "Tellor",
+    "persian_name": "تلور"
+  },
+  {
+    "symbol": "1INCHUSDT",
+    "english_name": "1inch Network",
+    "persian_name": "وان‌اینچ"
+  },
+  {
+    "symbol": "OMUSDT",
+    "english_name": "MANTRA",
+    "persian_name": "مانترا"
+  },
+  {
+    "symbol": "RSRIRT",
+    "english_name": "Reserve Rights",
+    "persian_name": "رزرو رایتس"
+  },
+  {
+    "symbol": "RNDRIRT",
+    "english_name": "Render Token",
+    "persian_name": "رندر توکن"
+  },
+  {
+    "symbol": "SLPUSDT",
+    "english_name": "Smooth Love Potion",
+    "persian_name": "اسموث لاو پوشن"
+  },
+  {
+    "symbol": "SSVUSDT",
+    "english_name": "SSV Network",
+    "persian_name": "اس‌اس‌وی نتورک"
+  },
+  {
+    "symbol": "RNDRUSDT",
+    "english_name": "Render Token",
+    "persian_name": "رندر توکن"
+  },
+  {
+    "symbol": "AGLDIRT",
+    "english_name": "Adventure Gold",
+    "persian_name": "ادونچر گلد"
+  },
+  {
+    "symbol": "NEARUSDT",
+    "english_name": "NEAR Protocol",
+    "persian_name": "نیر پروتکل"
+  },
+  {
+    "symbol": "WOOUSDT",
+    "english_name": "WOO Network",
+    "persian_name": "وو نتورک"
+  },
+  {
+    "symbol": "YFIIRT",
+    "english_name": "yearn.finance",
+    "persian_name": "یرن فایننس"
+  },
+  {
+    "symbol": "MDTIRT",
+    "english_name": "Measurable Data Token",
+    "persian_name": "مژربل دیتا توکن"
+  },
+  {
+    "symbol": "CRVUSDT",
+    "english_name": "Curve DAO Token",
+    "persian_name": "کرو دائو توکن"
+  },
+  {
+    "symbol": "MDTUSDT",
+    "english_name": "Measurable Data Token",
+    "persian_name": "مژربل دیتا توکن"
+  },
+  {
+    "symbol": "EGLDUSDT",
+    "english_name": "MultiversX (Elrond)",
+    "persian_name": "الروند"
+  },
+  {
+    "symbol": "LRCIRT",
+    "english_name": "Loopring",
+    "persian_name": "لوپرینگ"
+  },
+  {
+    "symbol": "LPTUSDT",
+    "english_name": "Livepeer",
+    "persian_name": "لایوپیر"
+  },
+  {
+    "symbol": "BICOUSDT",
+    "english_name": "Biconomy",
+    "persian_name": "بایکونومی"
+  },
+  {
+    "symbol": "1M_PEPEIRT",
+    "english_name": "1M Pepe",
+    "persian_name": "یک میلیون پپه"
+  },
+  {
+    "symbol": "BICOIRT",
+    "english_name": "Biconomy",
+    "persian_name": "بایکونومی"
+  },
+  {
+    "symbol": "MAGICIRT",
+    "english_name": "Treasure",
+    "persian_name": "مجیک"
+  },
+  {
+    "symbol": "ETHFIIRT",
+    "english_name": "Ether.fi",
+    "persian_name": "اترفای"
+  },
+  {
+    "symbol": "ANTUSDT",
+    "english_name": "Aragon",
+    "persian_name": "آراگون"
+  },
+  {
+    "symbol": "1INCHIRT",
+    "english_name": "1inch Network",
+    "persian_name": "وان‌اینچ"
+  },
+  {
+    "symbol": "APEUSDT",
+    "english_name": "ApeCoin",
+    "persian_name": "ایپ‌کوین"
+  },
+  {
+    "symbol": "1M_NFTIRT",
+    "english_name": "1M APENFT",
+    "persian_name": "یک میلیون ایپ‌ان‌اف‌تی"
+  },
+  {
+    "symbol": "ARBIRT",
+    "english_name": "Arbitrum",
+    "persian_name": "آربیتروم"
+  },
+  {
+    "symbol": "LRCUSDT",
+    "english_name": "Loopring",
+    "persian_name": "لوپرینگ"
+  },
+  {
+    "symbol": "WUSDT",
+    "english_name": "Wormhole",
+    "persian_name": "ورم‌هول"
+  },
+  {
+    "symbol": "BLURUSDT",
+    "english_name": "Blur",
+    "persian_name": "بلر"
+  },
+  {
+    "symbol": "CELRUSDT",
+    "english_name": "Celer Network",
+    "persian_name": "سلر نتورک"
+  },
+  {
+    "symbol": "DYDXIRT",
+    "english_name": "dYdX",
+    "persian_name": "دی‌وای‌دی‌ایکس"
+  },
+  {
+    "symbol": "CVXUSDT",
+    "english_name": "Convex Finance",
+    "persian_name": "کانوکس فایننس"
+  },
+  {
+    "symbol": "BALIRT",
+    "english_name": "Balancer",
+    "persian_name": "بالانسر"
+  },
+  {
+    "symbol": "TONIRT",
+    "english_name": "Toncoin",
+    "persian_name": "تون‌کوین"
+  },
+  {
+    "symbol": "100K_FLOKIUSDT",
+    "english_name": "100K Floki",
+    "persian_name": "صد هزار فلوکی"
+  },
+  {
+    "symbol": "JSTUSDT",
+    "english_name": "JUST",
+    "persian_name": "جاست"
+  },
+  {
+    "symbol": "ZROUSDT",
+    "english_name": "LayerZero",
+    "persian_name": "لیرزیرو"
+  },
+  {
+    "symbol": "ARBUSDT",
+    "english_name": "Arbitrum",
+    "persian_name": "آربیتروم"
+  },
+  {
+    "symbol": "APTIRT",
+    "english_name": "Aptos",
+    "persian_name": "آپتوس"
+  },
+  {
+    "symbol": "1M_NFTUSDT",
+    "english_name": "1M APENFT",
+    "persian_name": "یک میلیون ایپ‌ان‌اف‌تی"
+  },
+  {
+    "symbol": "CELRIRT",
+    "english_name": "Celer Network",
+    "persian_name": "سلر نتورک"
+  },
+  {
+    "symbol": "UMAUSDT",
+    "english_name": "UMA",
+    "persian_name": "اوما"
+  },
+  {
+    "symbol": "SKLUSDT",
+    "english_name": "SKALE Network",
+    "persian_name": "اسکیل نتورک"
+  },
+  {
+    "symbol": "ZRXUSDT",
+    "english_name": "0x",
+    "persian_name": "زیرو ایکس"
+  },
+  {
+    "symbol": "AGLDUSDT",
+    "english_name": "Adventure Gold",
+    "persian_name": "ادونچر گلد"
+  },
+  {
+    "symbol": "ALGOIRT",
+    "english_name": "Algorand",
+    "persian_name": "الگورند"
+  },
+  {
+    "symbol": "NEARIRT",
+    "english_name": "NEAR Protocol",
+    "persian_name": "نیر پروتکل"
+  },
+  {
+    "symbol": "APTUSDT",
+    "english_name": "Aptos",
+    "persian_name": "آپتوس"
+  },
+  {
+    "symbol": "ZRXIRT",
+    "english_name": "0x",
+    "persian_name": "زیرو ایکس"
+  },
+  {
+    "symbol": "SUSHIUSDT",
+    "english_name": "SushiSwap",
+    "persian_name": "سوشی‌سواپ"
+  },
+  {
+    "symbol": "FETUSDT",
+    "english_name": "Fetch.ai",
+    "persian_name": "فچ‌ای‌آی"
+  },
+  {
+    "symbol": "ALGOUSDT",
+    "english_name": "Algorand",
+    "persian_name": "الگورند"
+  },
+  {
+    "symbol": "1M_PEPEUSDT",
+    "english_name": "1M Pepe",
+    "persian_name": "یک میلیون پپه"
+  },
+  {
+    "symbol": "MASKIRT",
+    "english_name": "Mask Network",
+    "persian_name": "مسک نتورک"
+  },
+  {
+    "symbol": "EGALAIRT",
+    "english_name": "Gala (Ethereum)",
+    "persian_name": "گالا (اتریوم)"
+  },
+  {
+    "symbol": "FLOWIRT",
+    "english_name": "Flow",
+    "persian_name": "فلو"
+  },
+  {
+    "symbol": "1B_BABYDOGEUSDT",
+    "english_name": "1B Baby Doge Coin",
+    "persian_name": "یک میلیارد بیبی دوج کوین"
+  },
+  {
+    "symbol": "MASKUSDT",
+    "english_name": "Mask Network",
+    "persian_name": "مسک نتورک"
+  },
+  {
+    "symbol": "1M_BTTUSDT",
+    "english_name": "1M BitTorrent",
+    "persian_name": "یک میلیون بیت‌تورنت"
+  },
+  {
+    "symbol": "STORJUSDT",
+    "english_name": "Storj",
+    "persian_name": "استورج"
+  },
+  {
+    "symbol": "XMRUSDT",
+    "english_name": "Monero",
+    "persian_name": "مونرو"
+  },
+  {
+    "symbol": "OMGIRT",
+    "english_name": "OMG Network",
+    "persian_name": "اومیسه‌گو"
+  },
+  {
+    "symbol": "SNTUSDT",
+    "english_name": "Status",
+    "persian_name": "استاتوس"
+  },
+  {
+    "symbol": "APEIRT",
+    "english_name": "ApeCoin",
+    "persian_name": "ایپ‌کوین"
+  },
+  {
+    "symbol": "FILUSDT",
+    "english_name": "Filecoin",
+    "persian_name": "فایل‌کوین"
+  },
+  {
+    "symbol": "ENJUSDT",
+    "english_name": "Enjin Coin",
+    "persian_name": "انجین کوین"
+  },
+  {
+    "symbol": "OMGUSDT",
+    "english_name": "OMG Network",
+    "persian_name": "اومیسه‌گو"
+  },
+  {
+    "symbol": "WOOIRT",
+    "english_name": "WOO Network",
+    "persian_name": "وو نتورک"
+  },
+  {
+    "symbol": "CHZUSDT",
+    "english_name": "Chiliz",
+    "persian_name": "چیلیز"
+  },
+  {
+    "symbol": "ENJIRT",
+    "english_name": "Enjin Coin",
+    "persian_name": "انجین کوین"
+  },
+  {
+    "symbol": "DYDXUSDT",
+    "english_name": "dYdX",
+    "persian_name": "دی‌وای‌دی‌ایکس"
+  },
+  {
+    "symbol": "AGIXUSDT",
+    "english_name": "SingularityNET",
+    "persian_name": "سینگولاریتی‌نت"
+  },
+  {
+    "symbol": "JSTIRT",
+    "english_name": "JUST",
+    "persian_name": "جاست"
+  },
+  {
+    "symbol": "LDOUSDT",
+    "english_name": "Lido DAO",
+    "persian_name": "لیدو دائو"
+  },
+  {
+    "symbol": "SNXUSDT",
+    "english_name": "Synthetix",
+    "persian_name": "سنتتیکس"
+  }
+]
