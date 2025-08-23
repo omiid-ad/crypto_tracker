@@ -185,8 +185,8 @@ CELERY_TIMEZONE = 'Asia/Tehran'
 
 # Celery Beat settings (for periodic tasks)
 CELERY_BEAT_SCHEDULE = {
-    f'update-or-create-coins-every-5-minutes': {
+    f'update-or-create-coins-every-minute': {
         'task': 'crypto.tasks.update_or_create_coins',
-        'schedule': crontab(minute='*/5'),
+        'schedule': crontab(minute='*/1'),
     }
 }
