@@ -12,4 +12,4 @@ class CoinPriceHistorySerializer(serializers.ModelSerializer):
 class CoinSerializer(serializers.ModelSerializer):
     class Meta:
         model = Coin
-        fields = ['symbol', 'price', 'last_price_update']
+        fields = ['symbol', 'price', 'last_price_update', 'persian_name', 'english_name']
