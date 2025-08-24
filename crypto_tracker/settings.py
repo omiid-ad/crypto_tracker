@@ -31,6 +31,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 DEBUG = environ.get('DEBUG', 'False').lower() in ('true', '1')
 
 ALLOWED_HOSTS = ['*'] if DEBUG else [h.strip() for h in environ.get("ALLOWED_HOSTS").split(',')]
+CORS_ALLOW_ALL_ORIGINS = DEBUG
 
 # Application definition
 
@@ -42,12 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crypto.apps.CryptoConfig',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
