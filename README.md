@@ -1,11 +1,12 @@
 # Crypto Tracker API
 
-A Django REST API for tracking crypto coins with **price history** updated periodically using Celery and Redis.
+A Django REST API + Vue.js for tracking crypto coins with **price history** updated periodically using Celery and Redis.
 
 ---
 
 ## **Tech Stack**
 - **Python 3.11+**
+- **Vue.js (Frontend)**
 - **Django 5.2.5**
 - **Django REST Framework (DRF)**
 - **PostgreSQL**
@@ -65,7 +66,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Visit: **http://127.0.0.1:8000**
+Visit: **http://127.0.0.1:8000** to **explore the Vue.js frontend**
 
 or
 
@@ -88,7 +89,7 @@ celery -A crypto_tracker beat -l info
 ```
 
 ### **🔟 Periodic price updates**
-The `update_or_create_coins` task runs **every minute** and stores price history.
+The `update_or_create_coins` task runs __**every minute**__ and stores price history.
 
 ---
 
