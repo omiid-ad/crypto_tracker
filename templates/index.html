@@ -1,0 +1,735 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoDash</title>
+    <script src="{% static 'js/vue.global.js' %}"></script>
+    <script src="{% static 'js/vue-router.global.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="{% static 'css/css2.css' %}" rel="stylesheet">
+    <link href="{% static 'css/vazir.css' %}" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .persian-text {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+        }
+
+        .app-container {
+            min-height: 100vh;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: #ffd700;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Coins Grid */
+        .coins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .coin-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coin-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .coin-card:hover::before {
+            left: 100%;
+        }
+
+        .coin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .coin-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .coin-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .coin-info h3 {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .coin-info .symbol {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .coin-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .coin-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .change-positive { color: #4ade80; }
+        .change-negative { color: #f87171; }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pagination button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .pagination button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Coin Detail Page */
+        .detail-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .detail-coin-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .detail-coin-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin-right: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .detail-coin-info h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-coin-info .symbol {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .detail-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin: 1rem 0;
+        }
+
+        .detail-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .detail-stat {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .detail-stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .detail-stat-value {
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        /* Chart Placeholder */
+        .chart-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .chart-placeholder {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+
+        /* Error Message */
+        .error {
+            text-align: center;
+            color: #f87171;
+            padding: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .coins-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .coin-price {
+                font-size: 1.5rem;
+            }
+
+            .detail-coin-info h1 {
+                font-size: 2rem;
+            }
+
+            .detail-price {
+                font-size: 2rem;
+            }
+
+            .detail-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <router-link to="/" class="logo">
+                    <i class="fas fa-coins"></i>
+                    Crypto Tracker
+                </router-link>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <router-view></router-view>
+        </main>
+    </div>
+</div>
+
+<script>
+    const { createApp } = Vue;
+    const { createRouter, createWebHashHistory } = VueRouter;
+
+    // API Configuration
+    const API_BASE_URL = 'http://localhost:8000/api/v1/crypto';
+
+    // Utility function to format currency
+    function formatCurrency(value, symbol = '') {
+        if (value === null || value === undefined) return symbol.includes('IRT') ? '0 ریال' : '$0.00';
+
+        if (symbol.includes('IRT')) {
+            return new Intl.NumberFormat('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value) + ' ریال';
+        }
+
+        return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 6
+        }).format(value);
+    }
+
+    // Utility function to format date
+    function formatDate(dateString) {
+        if (!dateString) return 'N/A';
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    }
+
+    // Utility function to format percentage
+    function formatPercentage(value) {
+        if (value === null || value === undefined) return '0%';
+        return `${value >= 0 ? '+' : ''}${value.toFixed(2)}%`;
+    }
+
+    // Home Component
+    const Home = {
+        data() {
+            return {
+                coins: [],
+                loading: true,
+                error: null,
+                currentPage: 1,
+                hasNext: false,
+                hasPrevious: false,
+                totalPages: 1
+            };
+        },
+        mounted() {
+            this.fetchCoins();
+        },
+        methods: {
+            async fetchCoins(page = 1) {
+                this.loading = true;
+                this.error = null;
+
+                try {
+                    const response = await fetch(`${API_BASE_URL}/coins/?page=${page}&size=9`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    this.coins = data.results || [];
+                    this.hasNext = !!data.next;
+                    this.hasPrevious = !!data.previous;
+                    this.currentPage = page;
+
+                    // Calculate total pages (rough estimate)
+                    if (data.count) {
+                        this.totalPages = Math.ceil(data.count / (data.results?.length || 10));
+                    }
+                } catch (error) {
+                    console.error('Error fetching coins:', error);
+                    this.error = 'Failed to load coins. Please check if your Django server is running on localhost:8000';
+                } finally {
+                    this.loading = false;
+                }
+            },
+            goToDetail(coin) {
+                this.$router.push(`/coin/${coin.symbol}`);
+            },
+            nextPage() {
+                if (this.hasNext) {
+                    this.fetchCoins(this.currentPage + 1);
+                }
+            },
+            previousPage() {
+                if (this.hasPrevious) {
+                    this.fetchCoins(this.currentPage - 1);
+                }
+            },
+            getCoinInitials(name) {
+                return name ? name.substring(0, 2).toUpperCase() : 'C';
+            },
+            formatCurrency,
+            formatPercentage,
+            formatDate
+        },
+        template: `
+                {% verbatim %}
+                <div>
+                    <div v-if="loading" class="loading">
+                        <div class="spinner"></div>
+                        Loading coins...
+                    </div>
+
+                    <div v-else-if="error" class="error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        {{ error }}
+                    </div>
+
+                    <div v-else>
+                        <div class="coins-grid">
+                            <div
+                                v-for="coin in coins"
+                                :key="coin.id"
+                                class="coin-card"
+                                @click="goToDetail(coin)"
+                            >
+                                <div class="coin-header">
+                                    <div class="coin-icon">
+                                        {{ getCoinInitials(coin.symbol) }}
+                                    </div>
+                                    <div class="coin-info">
+                                        <h3>{{ coin.english_name || 'Unknown' }}</h3>
+                                        <div class="symbol">{{ coin.symbol || 'N/A' }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="coin-price persian-text">
+                                    {{ formatCurrency(coin.price, coin.symbol) }}
+                                </div>
+
+                                <div class="coin-stats">
+                                    <div class="stat">
+                                        <div style="font-size: 18px" class="stat-value change-positive persian-text">
+                                            {{ coin.persian_name }}
+                                        </div>
+                                    </div>
+                                    <div class="stat">
+                                        <div class="stat-label">Last Update</div>
+                                        <div class="stat-value">
+                                            {{ formatDate(coin.last_price_update) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div v-if="coins.length > 0" class="pagination">
+                            <button @click="previousPage" :disabled="!hasPrevious">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </button>
+                            <span style="color: white;">Page {{ currentPage }}</span>
+                            <button @click="nextPage" :disabled="!hasNext">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endverbatim %}
+            `
+    };
+
+    // Coin Detail Component
+    const CoinDetail = {
+        data() {
+            return {
+                coin: null,
+                history: [],
+                loading: true,
+                error: null
+            };
+        },
+        mounted() {
+            this.fetchCoinDetail();
+        },
+        watch: {
+            '$route'() {
+                this.fetchCoinDetail();
+            }
+        },
+        methods: {
+            async fetchCoinDetail() {
+                this.loading = true;
+                this.error = null;
+
+                try {
+                    const coinId = this.$route.params.id;
+
+                    // Fetch coin details
+                    const coinResponse = await fetch(`${API_BASE_URL}/coins/${coinId}/`);
+                    if (!coinResponse.ok) {
+                        throw new Error(`HTTP error! status: ${coinResponse.status}`);
+                    }
+
+                    this.coin = await coinResponse.json();
+
+                    // fetch history
+                    try {
+                        const historyResponse = await fetch(`${API_BASE_URL}/coins/${coinId}/history/`);
+                        if (historyResponse.ok) {
+                            this.history = await historyResponse.json();
+                        }
+                    } catch (historyError) {
+                        console.warn('Could not fetch price history:', historyError);
+                    }
+
+                } catch (error) {
+                    console.error('Error fetching coin detail:', error);
+                    this.error = 'Failed to load coin details. Please check if your Django server is running.';
+                } finally {
+                    this.loading = false;
+                }
+            },
+            getCoinInitials(name) {
+                return name ? name.substring(0, 2).toUpperCase() : 'C';
+            },
+            formatCurrency,
+            formatPercentage,
+            formatDate,
+        },
+        template: `
+                {% verbatim %}
+                <div>
+                    <div v-if="loading" class="loading">
+                        <div class="spinner"></div>
+                        Loading coin details...
+                    </div>
+
+                    <div v-else-if="error" class="error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        {{ error }}
+                    </div>
+
+                    <div v-else-if="coin">
+                        <div class="detail-header">
+                            <router-link to="/" class="back-button">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Dashboard
+                            </router-link>
+
+                            <div class="detail-coin-header">
+                                <div class="detail-coin-icon">
+                                    {{ getCoinInitials(coin.symbol) }}
+                                </div>
+                                <div class="detail-coin-info">
+                                    <h1>{{ coin.english_name || 'Unknown Coin' }} ({{ coin.persian_name }})</h1>
+                                    <div class="symbol">{{ coin.symbol || 'N/A' }}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-price">
+                            {{ formatCurrency(coin.price, coin.symbol) }}
+                        </div>
+
+                        <div class="detail-stats">
+                            <div class="detail-stat">
+                                <div class="detail-stat-label">24h Change</div>
+                                <div class="detail-stat-value change-positive">
+                                    0%
+                                </div>
+                            </div>
+                            <div class="detail-stat">
+                                <div class="detail-stat-label">Last Update</div>
+                                <div class="detail-stat-value">
+                                    {{ formatDate(coin.last_price_update) }}
+                                </div>
+                            </div>
+                        </div>
+
+                      <div class="chart-container">
+                        <h3 style="margin-bottom: 1rem; color: white;">Price History (Last 10 Changes)</h3>
+                        <div class="chart-placeholder" v-if="history.length === 0">
+                          <i class="fas fa-chart-line" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                          <p>Price history chart would be displayed here</p>
+                          <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">
+                            No historical data available
+                          </p>
+                        </div>
+                        <div v-else class="price-history-list">
+                          <div v-for="(record, index) in history.slice(0, 10)" :key="index"
+                               style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; margin-bottom: 0.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                            <span>{{ formatDate(record.timestamp) }}</span>
+                            <span style="font-weight: 600;">{{ formatCurrency(record.price, coin.symbol) }}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                {% endverbatim %}
+            `
+    };
+
+    // Router Setup
+    const routes = [
+        { path: '/', component: Home },
+        { path: '/coin/:id', component: CoinDetail }
+    ];
+
+    const router = createRouter({
+        history: createWebHashHistory(),
+        routes
+    });
+
+    // Vue App
+    const app = createApp({});
+    app.use(router);
+    app.mount('#app');
+</script>
+</body>
+</html>
